@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Find the Prime Number between range</h3>
+    <script>
+        let num1=+prompt("Enter the first number:");
+        let num2=+prompt("Enter the second number:");
+        
+        let i=0,j=0,c=0;
+        document.write("Prime number bewtween "+num1+ " upto "+num2+"  : ");
+        for(i = num1; i<=num2;i++){
+            let c = 0;
+            for(j = 1; j<=i; j++){
+                if(i%j === 0){
+                    c++;
+                }
+            }
+            if(c === 2){
+                document.write(i + "  ");
+            }
+        }
+    </script>
+</body>
+</html>
