@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           
+
+            function isArmstrong(sum, originalNummber){
+                    if(sum===originalNummber){
+                        return true;
+                    }
+                    return false;
+            }
+
+            function power(originalNummber, n){//153 3
+                let c = 0;
+                while(originalNummber!=0){
+                    c++;
+                    originalNummber = Math.floor(originalNummber/10);
+                }
+                console.log("Count is "+c);
+                
+
+                return Math.pow(n,c);
+            }
+            function printNumber(){
+                let start = +prompt("Enter starting number");
+                let end = +prompt("Enter ending number");
+                //console.log("Start = "+start+"  End = "+end);
+                let sum = 0;
+                    for(let i = start; i<=end; i++){
+                        let temp = i;//153
+                        sum=0;
+                        while(temp!=0){//153
+                            sum+=power(i, temp%10);// 153, 3
+                            temp = Math.floor(temp/10);
+
+                        }
+                        if(isArmstrong(sum,i)){
+                            document.write(i+"<br>");
+                        }
+                            
+                    }
+            }
+           
+            
+            printNumber( );
+    </script>
+</body>
+</html>
