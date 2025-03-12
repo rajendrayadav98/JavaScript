@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array of numbers
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Filter the array to get only even numbers
+let evenNumbers = numbers.filter(function(num) {
+    return num % 2 === 0;
+});
+
+console.log("Even Numbers:", evenNumbers);
+
+// Map over the array to square each number
+let squaredNumbers = numbers.map(function(num) {
+    return num * num;
+});
+
+console.log("Squared Numbers:", squaredNumbers);
+
+// Sum all the numbers using reduce
+let sum = numbers.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+}, 0); // Initial value of the accumulator is 0
+
+console.log("Sum of all numbers:", sum);
+
+// Find the first number greater than 5
+let firstGreaterThanFive = numbers.find(function(num) {
+    return num > 5;
+});
+
+console.log("First number greater than 5:", firstGreaterThanFive);
+
+// Check if all numbers are positive
+let allPositive = numbers.every(function(num) {
+    return num > 0;
+});
+
+console.log("Are all numbers positive?", allPositive);
+
+// Check if any number is greater than 8
+let anyGreaterThanEight = numbers.some(function(num) {
+    return num > 8;
+});
+
+console.log("Is any number greater than 8?", anyGreaterThanEight);
+
+    </script>
+</body>
+</html>
