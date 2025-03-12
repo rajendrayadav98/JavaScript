@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>demo on spread operator</h3>
+    <script>
+        const a=[11,22,33];
+        let b=[100001];
+        //b=a;//its copy ref
+        document.write(`A ${a}<br>`);
+        document.write(`B ${b}<br>`);
+
+        const ft=['html','css','js'];
+        const bt=['java','dot.net','python'];
+        const db=['oracle','mysql'];
+
+        const all=[...ft,...bt,...db];
+        document.write(`${all}<br>`);
+
+    </script>
+</body>
+</html>
